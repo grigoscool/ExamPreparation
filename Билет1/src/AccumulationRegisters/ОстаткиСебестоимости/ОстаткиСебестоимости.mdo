@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3198f147-d569-4337-aaf1-4148b7ff6a5d">
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="71e4d58e-de9c-49b9-b04e-15e9de53af43">
   <producedTypes>
-    <selectionType typeId="9584869e-fbfa-48ee-81b6-25cefc52c6cb" valueTypeId="882e166e-c45d-487d-8047-ff6d6160a526"/>
-    <listType typeId="88ff9ba4-8ee2-4f86-bf4d-c5c64e5fe47f" valueTypeId="990d7e01-e152-4cab-8698-7cd2e0cfe52b"/>
-    <managerType typeId="deccc1dd-4a58-49a0-9074-7df43d63266d" valueTypeId="6072c37d-7bd2-4dd3-a242-34a69eb4af8f"/>
-    <recordSetType typeId="f9e7db7d-7af2-4c58-9228-60e8ce3c155f" valueTypeId="82a90355-7836-4924-9180-d7ae26d73970"/>
-    <recordKeyType typeId="6b0f99f8-8fe7-4666-9261-4f73784ccb04" valueTypeId="79b45a6c-5dfc-46f9-84ed-7f2f8d958eda"/>
-    <recordType typeId="eabe1009-091c-4df9-96b1-c72d05390aed" valueTypeId="856474c2-e3cb-4b4e-9418-4c7eae811e0e"/>
+    <selectionType typeId="bc94107c-99bb-4b6d-b1ec-f82bb3c8dc8b" valueTypeId="3294d81c-7733-4666-a706-ff78529678d6"/>
+    <listType typeId="fabe1714-ac52-4050-ba21-b10396e8daf5" valueTypeId="afbb601b-db47-40c1-99b9-91778aea2246"/>
+    <managerType typeId="52ac14b2-70ff-49c4-85f6-be3b4ceb4282" valueTypeId="7af3dfdb-297c-49f3-a335-b5775d2670fb"/>
+    <recordSetType typeId="61505079-29a4-4c15-875c-6381d6ece720" valueTypeId="16d0ec68-5064-4b6f-a1f8-73aebe2aae69"/>
+    <recordKeyType typeId="b66c3323-e87a-4eab-aad3-878e38d4d0a0" valueTypeId="a493b099-51f1-48ac-9688-ff89ec5f420d"/>
+    <recordType typeId="1cca75b1-37db-4509-bc02-ad0ca219d39f" valueTypeId="16b85b93-77c6-41cf-bb47-78f04cfeb47c"/>
   </producedTypes>
-  <name>ОстаткиНоменклатуры</name>
+  <name>ОстаткиСебестоимости</name>
   <synonym>
     <key>ru</key>
-    <value>Остатки номенклатуры</value>
+    <value>Остатки себестоимости</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
   <standardAttributes>
@@ -56,7 +56,7 @@
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
   <enableTotalsSplitting>true</enableTotalsSplitting>
-  <resources uuid="1e142f39-70d2-42a3-a260-ce71853e6408">
+  <resources uuid="0d9a2d4e-c1d4-4d3d-993b-2bc1793bf15d">
     <name>Количество</name>
     <synonym>
       <key>ru</key>
@@ -72,7 +72,24 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
-  <dimensions uuid="93b199d3-29f5-4233-96bb-8fb6457c12ce">
+  <resources uuid="d109acf5-c370-4fd6-af5f-f90f6dbfa399">
+    <name>Себестоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="2b256283-35a4-41d4-9923-2583c5a7a21d">
     <name>Номенклатура</name>
     <synonym>
       <key>ru</key>
@@ -87,14 +104,14 @@
     <fullTextSearch>Use</fullTextSearch>
     <useInTotals>true</useInTotals>
   </dimensions>
-  <dimensions uuid="b1d24854-d0cb-400f-897e-c8683a34022f">
-    <name>Склад</name>
+  <dimensions uuid="9f48c41f-e9e1-4034-b724-e3c827821f3c">
+    <name>Партия</name>
     <synonym>
       <key>ru</key>
-      <value>Склад</value>
+      <value>Партия</value>
     </synonym>
     <type>
-      <types>CatalogRef.Склады</types>
+      <types>DocumentRef.ПриходнаяНакладная</types>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>

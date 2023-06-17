@@ -31,6 +31,30 @@
         <common>true</common>
       </visible>
     </visibilityFragments>
+    <visibilityFragments>
+      <command>AccumulationRegister.ОстаткиСебестоимости.StandardCommand.OpenList</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.ПриходнаяНакладная.StandardCommand.Create</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.РасходнаяНакладная.StandardCommand.Create</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>InformationRegister.МетодыРасчетнойПолитики.StandardCommand.Create</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
   </commandsVisibility>
   <commandsPlacement>
     <placementFragments>
@@ -46,6 +70,11 @@
     <placementFragments>
       <group>CommandGroup.РегистрыНакоплений</group>
       <commands>AccumulationRegister.ОстаткиНоменклатуры.StandardCommand.OpenList</commands>
+      <commands>AccumulationRegister.ОстаткиСебестоимости.StandardCommand.OpenList</commands>
+    </placementFragments>
+    <placementFragments>
+      <group>CommandGroup.РегистрыСведений</group>
+      <commands>InformationRegister.МетодыРасчетнойПолитики.StandardCommand.OpenList</commands>
     </placementFragments>
   </commandsPlacement>
   <commandsOrder>
@@ -62,6 +91,11 @@
     <orderFragments>
       <group>CommandGroup.РегистрыНакоплений</group>
       <commands>AccumulationRegister.ОстаткиНоменклатуры.StandardCommand.OpenList</commands>
+      <commands>AccumulationRegister.ОстаткиСебестоимости.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>CommandGroup.РегистрыСведений</group>
+      <commands>InformationRegister.МетодыРасчетнойПолитики.StandardCommand.OpenList</commands>
     </orderFragments>
   </commandsOrder>
 </cmi:CommandInterface>

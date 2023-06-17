@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="25c6d8c9-b785-4c3e-84a7-c3f26c264cad">
+  <producedTypes>
+    <selectionType typeId="98b3d8ff-7087-44a9-80e3-842e19eecda8" valueTypeId="cf57d183-0241-4f78-acb5-aaaf94c3f49b"/>
+    <listType typeId="6c91152a-4d9c-4c9b-96c7-379579249b10" valueTypeId="30859b00-1343-4edc-8afc-d8fe203f42c3"/>
+    <managerType typeId="4810bcb9-dd2f-46e4-b956-3ec8a8bcf73a" valueTypeId="bad62c53-8506-4e13-8ada-f69e5506e93a"/>
+    <recordSetType typeId="4e7a6f72-4aad-4d6f-8539-ba73c6ff6202" valueTypeId="e3167579-1588-4bb8-88e6-ed7bde80fc14"/>
+    <recordKeyType typeId="605f8546-59bd-4a6c-97d8-4b284cb277c9" valueTypeId="826a6498-f7e5-45d1-9199-1ba128404a02"/>
+    <recordType typeId="9318e41d-173b-40ea-9403-0460b8a1c9ae" valueTypeId="a50668ba-9d53-4be4-9005-b8137db5bdf0"/>
+    <recordManagerType typeId="4cad810c-b7bc-4fc8-9037-967d44b78b01" valueTypeId="be9a7728-7725-418d-8c7e-a82f74071a44"/>
+  </producedTypes>
+  <name>МетодыРасчетнойПолитики</name>
+  <synonym>
+    <key>ru</key>
+    <value>Методы расчетной политики</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Year</informationRegisterPeriodicity>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="07859cb1-58cf-4e0c-ba14-d796114ed167">
+    <name>МетодРС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метод РС</value>
+    </synonym>
+    <type>
+      <types>EnumRef.УчетнаяПолитика</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+</mdclass:InformationRegister>
