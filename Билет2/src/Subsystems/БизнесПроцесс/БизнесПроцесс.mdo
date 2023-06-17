@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb8f8e1a-795f-4d7c-a2b9-91a0d5ab5d14">
+  <name>БизнесПроцесс</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бизнес процесс</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.БизнесПроцессы</picture>
+  </picture>
+</mdclass:Subsystem>
