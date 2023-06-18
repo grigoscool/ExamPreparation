@@ -15,4 +15,6 @@
   <content>Document.РасходнаяНакладная</content>
   <content>AccumulationRegister.ОстаткиНоменклатуры</content>
   <content>Catalog.Склады</content>
+  <content>AccumulationRegister.Продажи</content>
+  <content>Report.Продажи</content>
 </mdclass:Subsystem>

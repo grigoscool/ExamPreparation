@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номенклатура</dataPath>
+			<field>Номенклатура</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Количество</dataPath>
+			<field>КоличествоОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Себестоимость</dataPath>
+			<field>СебестоимостьОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Продажа</dataPath>
+			<field>ПродажаОборот</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПервойОтгрузки</dataPath>
+			<field>ДатаПервойОтгрузки</field>
+			<role>
+				<dcscom:periodNumber>2</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоследнейОтгрузки</dataPath>
+			<field>ДатаПоследнейОтгрузки</field>
+			<role>
+				<dcscom:periodNumber>3</dcscom:periodNumber>
+				<dcscom:periodType>Additional</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОтгрузок</dataPath>
+			<field>КоличествоОтгрузок</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ПродажиОстаткиИОбороты.Номенклатура,
+	ПродажиОстаткиИОбороты.КоличествоОборот,
+	ПродажиОстаткиИОбороты.СебестоимостьОборот,
+	ПродажиОстаткиИОбороты.ПродажаОборот,
+	МИНИМУМ(ПродажиОстаткиИОбороты.ПериодДень) КАК ДатаПервойОтгрузки,
+	МАКСИМУМ(ПродажиОстаткиИОбороты.ПериодДень) КАК ДатаПоследнейОтгрузки,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПродажиОстаткиИОбороты.Регистратор) КАК КоличествоОтгрузок
+ИЗ
+	РегистрНакопления.Продажи.ОстаткиИОбороты(,, Авто,,) КАК ПродажиОстаткиИОбороты
+СГРУППИРОВАТЬ ПО
+	ПродажиОстаткиИОбороты.Номенклатура,
+	ПродажиОстаткиИОбороты.КоличествоОборот,
+	ПродажиОстаткиИОбороты.СебестоимостьОборот,
+	ПродажиОстаткиИОбороты.ПродажаОборот</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>Прибыль</dataPath>
+		<expression>Продажа - Себестоимость</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Прибыль</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Интервал</dataPath>
+		<expression>ВЫБОР КОГДА КоличествоОтгрузок=1 Тогда "Разовая" ИНАЧЕ РазностьДат(ДатаПервойОтгрузки, ДатаПоследнейОтгрузки, "ДЕНЬ")/КоличествоОтгрузок КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Интервал</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Срок</dataPath>
+		<expression>РазностьДат(ДатаПоследнейОтгрузки, &amp;КонецПериода, "ДЕНЬ")</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Срок</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Номенклатура</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Количество</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Кол-во</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Себестоимость</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Себест-ть</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Продажа</dcsset:field>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продажа</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Прибыль</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Интервал</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Срок</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>НачалоПериода</dcscor:parameter>
+					<dcsset:userSettingID>fa9d6863-f67b-4ec4-a657-139dd9ca9b03</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КонецПериода</dcscor:parameter>
+					<dcsset:userSettingID>dcfd3104-824e-4b26-b2e5-33894516e2ef</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto">
+						<dcsset:use>false</dcsset:use>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Номенклатура.ВидНоменклатуры</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:OrderItemField">
+						<dcsset:field>Номенклатура</dcsset:field>
+						<dcsset:orderType>Asc</dcsset:orderType>
+					</dcsset:item>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter/>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+						<dcsset:useInGroup>DontUse</dcsset:useInGroup>
+						<dcsset:useInHierarchicalGroup>DontUse</dcsset:useInHierarchicalGroup>
+						<dcsset:useInOverall>DontUse</dcsset:useInOverall>
+						<dcsset:useInHeader>DontUse</dcsset:useInHeader>
+						<dcsset:useInParameters>DontUse</dcsset:useInParameters>
+						<dcsset:useInFilter>DontUse</dcsset:useInFilter>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter/>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Отступ</dcscor:parameter>
+								<dcscor:value xsi:type="xs:decimal">1</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:HorizontalAlign">Left</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>Формат</dcscor:parameter>
+								<dcscor:value xsi:type="v8:LocalStringType">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>ЧДЦ=0</v8:content>
+									</v8:item>
+								</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection/>
+						<dcsset:filter/>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>МинимальнаяШирина</dcscor:parameter>
+								<dcscor:value xsi:type="xs:decimal">10</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

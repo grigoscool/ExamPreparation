@@ -72,6 +72,23 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
   </resources>
+  <resources uuid="93a7bb8f-6b08-4867-a5e0-637b0af40046">
+    <name>Себестоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
   <dimensions uuid="93b199d3-29f5-4233-96bb-8fb6457c12ce">
     <name>Номенклатура</name>
     <synonym>
@@ -85,5 +102,19 @@
     <maxValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9f56e8a0-6bc9-44ff-b344-3e3723e6e2c3">
+    <name>Партия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Партия</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ПриходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
   </dimensions>
 </mdclass:AccumulationRegister>
