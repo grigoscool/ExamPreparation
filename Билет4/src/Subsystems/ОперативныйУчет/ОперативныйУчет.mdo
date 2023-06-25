@@ -16,4 +16,5 @@
   <content>AccumulationRegister.ОстаткиНоменклатуры</content>
   <content>Catalog.Склады</content>
   <content>InformationRegister.ПриоритетСкладов</content>
+  <content>Report.ДвижениеТоваров</content>
 </mdclass:Subsystem>
