@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="eb9c8a00-ee7d-4819-b3f7-f83ad07178bd">
+  <producedTypes>
+    <objectType typeId="2e4062e4-ee78-41eb-97b1-9d7c990d6f14" valueTypeId="5d3cf946-d8d7-4092-993f-791a245c3543"/>
+    <refType typeId="2523e996-1e20-4516-b0a8-5714821181d8" valueTypeId="72ca7c54-6da1-4d26-8ca7-0f75d5eb9c8d"/>
+    <selectionType typeId="45640d31-166c-498f-b101-00c3bafcf83a" valueTypeId="7a99906e-40f2-4047-b8b0-3c5475954992"/>
+    <listType typeId="de3a4967-4efc-4635-ba05-71f6f023a7e1" valueTypeId="0a007d63-6072-4162-9907-1d7bc067a0a4"/>
+    <managerType typeId="46dc4595-14ac-4494-a1c1-3705e3046f66" valueTypeId="a7e7d05c-cc71-4a0f-8c72-51d00ad4973b"/>
+  </producedTypes>
+  <name>УстановкаМетодаРС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Установка метода РС</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Document.УстановкаМетодаРС.StandardAttribute.Number</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <numberType>String</numberType>
+  <numberLength>9</numberLength>
+  <numberAllowedLength>Variable</numberAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <realTimePosting>Deny</realTimePosting>
+  <registerRecords>AccumulationRegister.ОстаткиНоменклатуры</registerRecords>
+  <registerRecords>InformationRegister.УчетнаяПолитика</registerRecords>
+  <postInPrivilegedMode>true</postInPrivilegedMode>
+  <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
+  <attributes uuid="49f56a02-3de2-439c-96d6-8797e86ef575">
+    <name>МетодРС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Метод РС</value>
+    </synonym>
+    <type>
+      <types>EnumRef.УчетнаяПолитика</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Document>
