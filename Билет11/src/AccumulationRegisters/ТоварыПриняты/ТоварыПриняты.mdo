@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="523fe810-6523-461b-a801-219074f357f7">
+  <producedTypes>
+    <selectionType typeId="ae35f338-88aa-448c-a26f-57cff14dabb0" valueTypeId="280e0c77-1948-4620-bddd-1f0f7e66f402"/>
+    <listType typeId="83a40d79-d704-4208-8bab-7832968a86e2" valueTypeId="5e62aad8-c129-4a0f-adf5-74443a622ab1"/>
+    <managerType typeId="e97d7b37-60a7-4499-992d-c9a6a8f0815f" valueTypeId="4c2f90e3-6b44-46ae-8dbf-b4756d30d632"/>
+    <recordSetType typeId="d5f2aac1-1b35-4dc8-a1cb-b3d75a2889b6" valueTypeId="cb848e3e-4808-4ad7-9c65-41afdeb0f4dc"/>
+    <recordKeyType typeId="30e954d0-6811-47ef-aa76-37284e12d487" valueTypeId="38859b9e-025d-41dd-9425-c430dde6ebf1"/>
+    <recordType typeId="90f29f4c-17a9-4ded-8795-66aa0ccd4bb4" valueTypeId="aaccac09-e27c-4ba0-862d-1f851c8c3888"/>
+  </producedTypes>
+  <name>ТоварыПриняты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Товары приняты</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="87b1917f-517b-4ef4-b74c-7e6989ec9da9">
+    <name>КоличествоПринято</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество принято</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="20887332-7638-4463-b164-2da09b72f08c">
+    <name>СебестоимостьПринятых</name>
+    <synonym>
+      <key>ru</key>
+      <value>Себестоимость принятых</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="1f99bdb5-72b8-49cc-86e9-81382c977f2b">
+    <name>Номенклатура</name>
+    <synonym>
+      <key>ru</key>
+      <value>Номенклатура</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Номенклатура</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
