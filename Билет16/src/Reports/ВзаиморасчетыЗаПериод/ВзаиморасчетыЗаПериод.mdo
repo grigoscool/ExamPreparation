@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dd89e325-6729-4935-b370-43eabee92f1b">
+  <producedTypes>
+    <objectType typeId="8c852b5d-6c9e-46ef-966b-58d5c5da7438" valueTypeId="7ef0cb02-8e9a-41ae-88e4-7ca2ad780a91"/>
+    <managerType typeId="c7c0ab31-7d84-4936-8383-6f59caa02cba" valueTypeId="a925b53d-5967-48d5-8115-10aed67b7ed5"/>
+  </producedTypes>
+  <name>ВзаиморасчетыЗаПериод</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты за период</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ВзаиморасчетыЗаПериод.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <templates uuid="1e6b6bed-456b-40fa-856b-fe5f8033e0c5">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

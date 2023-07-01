@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b0d23396-9b48-431f-9db1-91e3e333fc83">
+  <name>ОУ</name>
+  <synonym>
+    <key>ru</key>
+    <value>ОУ</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.Номенклатура</content>
+  <content>Document.ПриходнаяНакладная</content>
+  <content>Document.РасходнаяНакладная</content>
+  <content>Document.ПриходДенег</content>
+  <content>InformationRegister.УсловияКредита</content>
+  <content>AccumulationRegister.Взаиморасчеты</content>
+  <content>Report.ВзаиморасчетыЗаПериод</content>
+</mdclass:Subsystem>

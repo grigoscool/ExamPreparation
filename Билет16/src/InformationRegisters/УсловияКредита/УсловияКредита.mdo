@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="767906ca-33c5-47e4-b8fd-f7c0a4c8efd2">
+  <producedTypes>
+    <selectionType typeId="f25dd4da-3601-4c40-acdb-a530bb364308" valueTypeId="86e619f5-c202-4104-9d68-4dbcb18a5926"/>
+    <listType typeId="dcb04e20-ec2c-4c0c-8ad2-ddc03d056c88" valueTypeId="950492ed-73a2-47c1-a138-0da9dabd0d84"/>
+    <managerType typeId="e64cfe90-f576-4506-b1a7-614563091b1f" valueTypeId="9ef926ad-aff5-4bd8-a3c1-92ddbbae3446"/>
+    <recordSetType typeId="ff311e06-42d3-46f7-a21b-1cdc290169fc" valueTypeId="cb2c800f-67d1-4c4f-9f9f-782d20cf9397"/>
+    <recordKeyType typeId="99def581-cd6a-4536-b43e-9f4cf1afe15e" valueTypeId="2d105245-7d4f-4ee0-b1ea-3debeafc0ae4"/>
+    <recordType typeId="f4c02a5a-1163-4ac4-84af-ddcd6fbafd9e" valueTypeId="80acfa2f-3c8c-4cb1-96f3-442cec917083"/>
+    <recordManagerType typeId="f05d2627-27e7-4d3f-8ec9-f3958b101a2d" valueTypeId="9521436f-1bb0-49d9-a185-e6ea23a34cce"/>
+  </producedTypes>
+  <name>УсловияКредита</name>
+  <synonym>
+    <key>ru</key>
+    <value>Условия кредита</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Day</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="3061c481-9a7d-475e-81cf-a806ace8b304">
+    <name>СуммаКредита</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма кредита</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="74150cf4-bb74-4294-9002-c3f800c30138">
+    <name>СрокКредитаВДнях</name>
+    <synonym>
+      <key>ru</key>
+      <value>Срок кредита в днях</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="a7de59b7-76d0-4a2b-83c1-36fb9f236cf8">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <master>true</master>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

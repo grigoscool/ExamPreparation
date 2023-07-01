@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="39549f6f-dd1d-459b-ba10-b4aba0239c8e">
+  <name>Сервис</name>
+  <synonym>
+    <key>ru</key>
+    <value>Сервис</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>DataProcessor.КонсольЗапросов</content>
+  <content>DataProcessor.ЗаполнениеГрафика</content>
+</mdclass:Subsystem>

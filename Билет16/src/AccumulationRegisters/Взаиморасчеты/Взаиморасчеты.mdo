@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="5053604e-ba01-4929-8cc9-d4538a1d9a4b">
+  <producedTypes>
+    <selectionType typeId="66ac6c61-a3b2-4910-bedc-7dcaf0c08558" valueTypeId="85e13f63-0740-45cb-b313-0326bd2c1beb"/>
+    <listType typeId="c7e85bc1-660a-4b59-8da9-e1f7e4428399" valueTypeId="114fba1e-b075-4067-aa88-65a8057f555c"/>
+    <managerType typeId="64be4400-31e7-4f63-856a-1633d00f8836" valueTypeId="7115fb64-4c55-47e5-9c79-15fc0e0e1d30"/>
+    <recordSetType typeId="d11f7f03-e3fe-4ab2-a26f-139ca54bc699" valueTypeId="a500a82b-155c-4fcf-ba41-0acdb77883f0"/>
+    <recordKeyType typeId="bba0c788-8197-4870-be74-9fb8bf837f87" valueTypeId="71d050c1-0e32-4df6-ade3-d446a85dd9e1"/>
+    <recordType typeId="4e3da2db-c9fa-4ea6-bb09-0c0b4d2e725b" valueTypeId="35491f26-60e2-45fa-b803-55eab8a2e381"/>
+  </producedTypes>
+  <name>Взаиморасчеты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="d2fb3838-3894-4229-b542-640ee01e551d">
+    <name>СуммаДолга</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма долга</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="ed8146fa-e3ab-4a94-807c-f2de0896fe86">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="8e405932-0638-4293-8c82-3c91c1b91a1c">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
