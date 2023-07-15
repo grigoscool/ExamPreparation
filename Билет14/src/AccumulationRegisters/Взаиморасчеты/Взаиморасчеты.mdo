@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="de26b677-0315-4dd5-9c10-d83619b6008e">
+  <producedTypes>
+    <selectionType typeId="0bafc13a-1729-4047-8110-c1463b12f235" valueTypeId="c7a31d2c-6bd1-43bf-97d7-14d4ead8c552"/>
+    <listType typeId="4f6989b9-747c-40bf-a0d5-ab5288a078f0" valueTypeId="64f9ca40-f096-4ad5-a3c0-1ba820ce1145"/>
+    <managerType typeId="65b8f3ac-b64d-428c-bc6b-a656a32148bc" valueTypeId="6e703d3d-2f15-47aa-9035-db1c0d74732d"/>
+    <recordSetType typeId="a66d05ff-81ad-41d3-b8e3-8a16881d5ef1" valueTypeId="9e71f6e0-2b97-4140-a7ca-52b304114716"/>
+    <recordKeyType typeId="ebff97ea-a989-4c5c-b5ac-4b9fab72a57c" valueTypeId="3e1e8d40-24af-436e-9831-08332912fabb"/>
+    <recordType typeId="cfdd0a32-f4a1-45cc-b362-3da1bc08dfb7" valueTypeId="00db1aec-4771-4820-9cee-a8124eda4507"/>
+  </producedTypes>
+  <name>Взаиморасчеты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Взаиморасчеты</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <resources uuid="71b5b9cc-1318-4bd4-a49a-67f387a936a5">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>12</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="92f7452f-570e-4310-8817-09858ab512a2">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <denyIncompleteValues>true</denyIncompleteValues>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="f6527669-53d2-4fc0-ad9a-a45c28aa137b">
+    <name>Накладная</name>
+    <synonym>
+      <key>ru</key>
+      <value>Накладная</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.РасходнаяНакладная</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="eaa9ce9c-3413-438f-9066-0f3b1f7a4294">
+    <name>Валюта</name>
+    <synonym>
+      <key>ru</key>
+      <value>Валюта</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Валюты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
