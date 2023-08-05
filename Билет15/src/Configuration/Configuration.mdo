@@ -13,6 +13,7 @@
   <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="6c200301-dde9-4d39-be70-f308c089363c"/>
   <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="9f2bc417-6f6a-4142-8bbb-70f95c19b247"/>
   <containedObjects classId="fb282519-d103-4dd3-bc12-cb271d631dfc" objectId="9aef61a5-702b-4ffa-a67c-e0b92778e29e"/>
+  <configurationExtensionCompatibilityMode>8.3.21</configurationExtensionCompatibilityMode>
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
@@ -52,6 +53,7 @@
     <languageCode>ru</languageCode>
   </languages>
   <subsystems>Subsystem.ОперативныйУчет</subsystems>
+  <subsystems>Subsystem.БухУчет</subsystems>
   <subsystems>Subsystem.Сервис</subsystems>
   <commonPictures>CommonPicture.ОперативныйУчет</commonPictures>
   <commonPictures>CommonPicture.БухгалтерскийУчет</commonPictures>
@@ -62,15 +64,22 @@
   <commandGroups>CommandGroup.Документы</commandGroups>
   <commandGroups>CommandGroup.РегистрыСведений</commandGroups>
   <commandGroups>CommandGroup.РегистрыНакоплений</commandGroups>
+  <commandGroups>CommandGroup.ПланСчетов</commandGroups>
+  <commandGroups>CommandGroup.РегистрБухгалтерии</commandGroups>
+  <commandGroups>CommandGroup.Перечисления</commandGroups>
+  <commandGroups>CommandGroup.ПВХ</commandGroups>
   <catalogs>Catalog.Валюты</catalogs>
   <catalogs>Catalog.Номенклатура</catalogs>
   <catalogs>Catalog.Контрагенты</catalogs>
   <catalogs>Catalog.ФизическиеЛица</catalogs>
   <catalogs>Catalog.Подразделения</catalogs>
+  <catalogs>Catalog.ДопВидыСубконто</catalogs>
+  <catalogs>Catalog.Склад</catalogs>
   <documents>Document.ПриходнаяНакладная</documents>
   <documents>Document.РасходнаяНакладная</documents>
   <documents>Document.НачислениеЗарплаты</documents>
   <documents>Document.ДопЗатраты</documents>
+  <documents>Document.Операции</documents>
   <enums>Enum.УчетнаяПолитика</enums>
   <enums>Enum.ВидыНоменклатуры</enums>
   <dataProcessors>DataProcessor.КонсольЗапросов</dataProcessors>
@@ -85,6 +94,7 @@
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.СвойстваОбъектов</chartsOfCharacteristicTypes>
   <chartsOfCharacteristicTypes>ChartOfCharacteristicTypes.ВидыСубконто</chartsOfCharacteristicTypes>
   <chartsOfAccounts>ChartOfAccounts.Управленческий</chartsOfAccounts>
+  <accountingRegisters>AccountingRegister.Управленческий</accountingRegisters>
   <chartsOfCalculationTypes>ChartOfCalculationTypes.ОсновныеНачисления</chartsOfCalculationTypes>
   <chartsOfCalculationTypes>ChartOfCalculationTypes.ДополнительныеНачисления</chartsOfCalculationTypes>
   <chartsOfCalculationTypes>ChartOfCalculationTypes.Удержания</chartsOfCalculationTypes>

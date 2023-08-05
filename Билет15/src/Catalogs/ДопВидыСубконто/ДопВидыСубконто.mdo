@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:ChartOfCharacteristicTypes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c7e6231c-76a6-4798-908a-8e38b9c620ec">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="49232b85-a268-4222-a97c-bb8869162922">
   <producedTypes>
-    <objectType typeId="42230672-102f-409d-82c7-714ef6c9fd6d" valueTypeId="e6e086a0-f724-43d9-abb6-3eae103f8101"/>
-    <refType typeId="ac60a22e-cf7d-4b50-a36d-f361b9b703c6" valueTypeId="0c4d2b39-3329-47f6-bbee-5ea87c9c4c13"/>
-    <selectionType typeId="da7ee0d7-6fa3-4320-b041-deee9f9612f8" valueTypeId="05f52325-e6b8-479e-8f15-eb1a7c37966a"/>
-    <listType typeId="6fca4575-7dad-47cc-8f0a-816f360344e2" valueTypeId="5a448ffc-768a-4091-a427-e20dea9fbe1f"/>
-    <managerType typeId="98aeb93f-e250-41a8-aa93-25100525d677" valueTypeId="a8dfce57-0c97-4214-9002-1a2999bf526a"/>
-    <containerType typeId="ae6de8c2-3d5b-4b2b-a18e-5d903d168dcb" valueTypeId="a997e5d9-e354-4054-a140-b01507b5ea56"/>
+    <objectType typeId="9c0031b5-3ed2-4477-9668-6444f1ad2a04" valueTypeId="219a7546-c42c-4562-9b0c-b5e20a338df7"/>
+    <refType typeId="e00ebd4c-477a-405d-acc1-9247773f0544" valueTypeId="e6c5920c-35d3-4105-8f7a-5e5d36cc6aa3"/>
+    <selectionType typeId="b080408b-de28-4377-9a88-b340b4f35a1f" valueTypeId="01b29d87-b3f2-49e1-8e66-72256faa01b2"/>
+    <listType typeId="aad70987-0d2e-4915-aeec-9ec5f91ab75d" valueTypeId="f805aae0-6b8a-4911-a27b-1f3c7d4f9aa6"/>
+    <managerType typeId="f6672aef-1fc4-4e05-a751-865c958c69b0" valueTypeId="b52d714f-37aa-4088-a0a7-632a4e393934"/>
   </producedTypes>
-  <name>ВидыСубконто</name>
+  <name>ДопВидыСубконто</name>
   <synonym>
     <key>ru</key>
-    <value>Виды субконто</value>
+    <value>Доп виды субконто</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>ChartOfCharacteristicTypes.ВидыСубконто.StandardAttribute.Description</inputByString>
-  <inputByString>ChartOfCharacteristicTypes.ВидыСубконто.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ДопВидыСубконто.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ДопВидыСубконто.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -27,7 +26,50 @@
   </standardAttributes>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
-    <name>ValueType</name>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
@@ -50,93 +92,19 @@
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>IsFolder</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Parent</name>
-    <fillFromFillingValue>true</fillFromFillingValue>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Predefined</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>DeletionMark</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <standardAttributes>
-    <dataHistory>Use</dataHistory>
-    <name>Ref</name>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-  </standardAttributes>
-  <createOnInput>DontUse</createOnInput>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
   <fullTextSearch>Use</fullTextSearch>
-  <characteristicExtValues>Catalog.ДопВидыСубконто</characteristicExtValues>
-  <type>
-    <types>CatalogRef.Валюты</types>
-    <types>CatalogRef.Контрагенты</types>
-    <types>CatalogRef.Номенклатура</types>
-    <types>CatalogRef.Склад</types>
-    <types>DocumentRef.ПриходнаяНакладная</types>
-    <types>DocumentRef.РасходнаяНакладная</types>
-    <types>CatalogRef.ДопВидыСубконто</types>
-    <types>CatalogRef.Подразделения</types>
-  </type>
+  <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
+  <owners>ChartOfCharacteristicTypes.ВидыСубконто</owners>
   <codeLength>9</codeLength>
-  <codeAllowedLength>Variable</codeAllowedLength>
   <descriptionLength>25</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
   <defaultPresentation>AsDescription</defaultPresentation>
-  <predefined>
-    <items id="da4b2361-c1cc-4fcd-aec9-bd9e7b5fb410">
-      <name>Номенклатура</name>
-      <description>Номенклатура</description>
-      <code>000000001</code>
-      <type>
-        <types>CatalogRef.Номенклатура</types>
-      </type>
-    </items>
-    <items id="226c4d24-f29f-4110-8f1b-d09783b39e1e">
-      <name>Партии</name>
-      <description>Партии</description>
-      <code>000000003</code>
-      <type>
-        <types>DocumentRef.ПриходнаяНакладная</types>
-      </type>
-    </items>
-    <items id="d53b8c34-d820-44c6-97c4-ca9905ff33fa">
-      <name>Склады</name>
-      <description>Склады</description>
-      <code>000000002</code>
-      <type>
-        <types>CatalogRef.Склад</types>
-      </type>
-    </items>
-  </predefined>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-</mdclass:ChartOfCharacteristicTypes>
+</mdclass:Catalog>

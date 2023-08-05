@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0f88c16e-6364-40bf-aa60-3923e3523b1b">
+  <name>БухУчет</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бух учет</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Catalog.Валюты</content>
+  <content>Catalog.Номенклатура</content>
+  <content>Catalog.Контрагенты</content>
+  <content>Catalog.ФизическиеЛица</content>
+  <content>Catalog.Подразделения</content>
+  <content>Document.ПриходнаяНакладная</content>
+  <content>Document.РасходнаяНакладная</content>
+  <content>ChartOfCharacteristicTypes.ВидыСубконто</content>
+  <content>ChartOfAccounts.Управленческий</content>
+  <content>AccountingRegister.Управленческий</content>
+  <content>Document.Операции</content>
+  <content>Catalog.ДопВидыСубконто</content>
+  <content>InformationRegister.КурсыВалют</content>
+  <content>InformationRegister.ГрафикиРаботы</content>
+  <content>AccumulationRegister.ОстаткиНоменклатуры</content>
+  <content>Catalog.Склад</content>
+  <content>InformationRegister.УчетнаяПолитика</content>
+</mdclass:Subsystem>

@@ -111,6 +111,8 @@
     <key>ru</key>
     <value>План счетов бухгалтерского учета &quot;Управленческий&quot;</value>
   </extendedListPresentation>
+  <extDimensionTypes>ChartOfCharacteristicTypes.ВидыСубконто</extDimensionTypes>
+  <maxExtDimensionCount>3</maxExtDimensionCount>
   <codeMask>@@.@@</codeMask>
   <codeLength>5</codeLength>
   <descriptionLength>50</descriptionLength>
@@ -173,6 +175,16 @@
         <description>Товары</description>
         <code>01.02</code>
         <order>01.02</order>
+        <accountingFlags>ChartOfAccounts.Управленческий.AccountingFlag.Количественный</accountingFlags>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто.Номенклатура</characteristicType>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто.Склады</characteristicType>
+        </extDimensionTypes>
+        <extDimensionTypes>
+          <characteristicType>ChartOfCharacteristicTypes.ВидыСубконто.Партии</characteristicType>
+        </extDimensionTypes>
       </childItems>
       <childItems id="56803467-7777-47f8-8140-bc783543f752">
         <name>ТоварыВПути</name>
@@ -266,4 +278,18 @@
   <choiceMode>BothWays</choiceMode>
   <autoOrderByCode>true</autoOrderByCode>
   <orderLength>5</orderLength>
+  <accountingFlags uuid="a45af506-b6a7-4424-ad4b-be11cda2a079">
+    <name>Количественный</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количественный</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </accountingFlags>
 </mdclass:ChartOfAccounts>
